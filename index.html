@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+  <title>Incentivos Challenger 60 Años — by Juju</title>
+  <meta name="description" content="Plan de incentivos Challenger 60 Años, Octubre 2026. Acumula puntos por ventas en gasodomésticos, video y audio, refrigeración y lavado."/>
+  
+  <!-- Open Graph / WhatsApp -->
+  <meta property="og:title" content="Incentivos Challenger 60 Años — by Juju"/>
+  <meta property="og:description" content="Plan de incentivos Challenger 60 Años, Octubre 2026. Acumula puntos por ventas."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="./Enlaces/og-whatsapp.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:site_name" content="Incentivos Challenger 60 Años"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#00E5FF",
+            brand: { navy:"#05162D", darker:"#030C19", card:"#0C2344", border:"#173B6C", cyan:"#00E5FF", accent:"#0099FF", yellow:"#FFD100" }
+          },
+          fontFamily: { display:["'Plus Jakarta Sans'","sans-serif"], accent:["'Space Grotesk'","sans-serif"] },
+          boxShadow: { glow:"0 0 24px -4px rgba(0,229,255,0.35)", card:"0 8px 30px rgba(0,0,0,0.35)", subtle:"0 2px 10px rgba(0,0,0,0.2)" }
+        }
+      }
+    };
+  </script>
+  <style>
+    *{-webkit-tap-highlight-color:transparent}
+    body{font-family:'Plus Jakarta Sans',sans-serif;min-height:100dvh;overscroll-behavior-y:none;background:#07172F}
+    .material-symbols-rounded{font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;display:inline-block;vertical-align:middle;line-height:1}
+    .pb-safe{padding-bottom:max(env(safe-area-inset-bottom),0.75rem)}
+    .screen{position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;pointer-events:none;transform:translateX(8px);transition:opacity .28s ease,transform .28s ease;will-change:opacity,transform;overflow:hidden}
+    .screen.active{opacity:1;pointer-events:auto;transform:translateX(0)}
+    .screen.exit{opacity:0;transform:translateX(-8px)}
+    @keyframes ping-slow{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(1.18);opacity:0}}
+    .ring-ping{animation:ping-slow 2.2s ease-in-out infinite}
+    .col-flag{display:inline-flex;flex-direction:column;width:14px;height:10px;border-radius:1.5px;overflow:hidden;flex-shrink:0}
+    .col-flag span:nth-child(1){flex:2;background:#FCD116}
+    .col-flag span:nth-child(2){flex:1;background:#003893}
+    .col-flag span:nth-child(3){flex:1;background:#CE1126}
+    .pts-badge{background:linear-gradient(135deg,#00E5FF 0%,#0099FF 100%);color:#030C19;font-weight:900;font-size:0.7rem;padding:5px 10px;border-radius:8px;letter-spacing:.06em;white-space:nowrap;flex-shrink:0;box-shadow:0 0 10px rgba(0,229,255,.3)}
+    .cat-btn.is-active{background:linear-gradient(90deg,rgba(0,229,255,.18) 0%,#0C2344 100%);border-color:#00E5FF!important;box-shadow:0 0 24px -4px rgba(0,229,255,0.35)}
+    .detail-card{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;border-radius:.875rem;background:#0B213F;border:1px solid rgba(23,59,108,.8);transition:border-color .2s,background .2s}
+    .detail-card:hover{border-color:rgba(0,229,255,.4);background:#0d2647}
+    .play-btn:hover .play-inner{box-shadow:0 0 30px rgba(0,229,255,.6)}
+    @keyframes nav-ping{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.6);opacity:0}}
+    .nav-dot{animation:nav-ping 1.8s ease-in-out infinite}
+    .scroll-content{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+    .scroll-content::-webkit-scrollbar { width: 5px; }
+    .scroll-content::-webkit-scrollbar-track { background: rgba(7, 23, 47, 0.5); }
+    .scroll-content::-webkit-scrollbar-thumb { background: rgba(0, 229, 255, 0.3); border-radius: 4px; }
+    .scroll-content::-webkit-scrollbar-thumb:hover { background: rgba(0, 229, 255, 0.6); }
+    .scroll-content { scrollbar-width: thin; scrollbar-color: rgba(0, 229, 255, 0.3) transparent; }
+    #video-overlay{position:fixed;inset:0;background:rgba(3,12,25,.96);z-index:9999;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
+    #video-overlay.open{opacity:1;pointer-events:auto}
+    #video-overlay video{width:min(90vw,480px);aspect-ratio:16/9;border-radius:1rem;border:1px solid rgba(0,229,255,.2);box-shadow:0 0 60px rgba(0,229,255,.15)}
+  </style>
+</head>
+<body class="text-slate-100 antialiased flex justify-center">
+
+<div class="relative w-full max-w-md min-h-screen flex flex-col shadow-2xl border-x border-brand-border/30 overflow-hidden" style="background:#07172F">
+
+  <!-- SCREENS WRAPPER -->
+  <div class="relative flex-1 overflow-hidden" id="screens-wrapper">
+
+    <!-- ══ SCREEN: HOME ══ -->
+    <div class="screen active" id="screen-home">
+      <header class="sticky top-0 z-30 backdrop-blur-xl bg-[#07172F]/90 border-b border-brand-border/50 px-6 pt-5 pb-4 shrink-0">
+        <div class="flex flex-col items-center">
+          <img src="./Enlaces/challenger_60_años.svg" alt="Challenger 60 Años" class="h-[4.25rem] w-auto object-contain max-w-[280px] filter drop-shadow-md" />
+          <div class="mt-3 inline-flex items-center gap-2 px-4 py-1.5 rounded-2xl bg-[#0A1C36] border border-emerald-400/50 shadow-[0_0_18px_rgba(16,185,129,0.25)]">
+            <span class="text-[11px] text-slate-200 font-semibold">by</span>
+            <img src="./Enlaces/logo_juju.svg" alt="Juju" class="h-8 w-auto object-contain" />
+          </div>
+        </div>
+        <div class="mt-4 flex items-center justify-center gap-3">
+          <div class="h-px flex-1 bg-gradient-to-r from-transparent via-primary/50 to-primary"></div>
+          <h1 class="text-[11px] font-extrabold tracking-[0.22em] uppercase text-white whitespace-nowrap">INCENTIVOS OCTUBRE</h1>
+          <div class="h-px flex-1 bg-gradient-to-r from-primary via-primary/50 to-transparent"></div>
+        </div>
+      </header>
+      <div class="scroll-content">
+        <main class="px-4 py-4 space-y-5">
+          <!-- VIDEO (AUTOPLAY LOOP INLINE) -->
+          <section class="relative rounded-2xl overflow-hidden shadow-card border border-brand-border bg-slate-900">
+            <div class="relative aspect-video w-full flex items-center justify-center bg-black">
+              <video id="hero-inline-video" class="w-full h-full object-cover" autoplay loop muted playsinline preload="auto">
+                <source src="https://www.madrugafilms.com/wp-content/uploads/2026/10/video_spot_campana.mp4" type="video/mp4"/>
+              </video>
+              <div class="absolute top-3 left-3 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10 flex items-center gap-1.5 z-10">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="text-[10px] font-bold tracking-wider text-white uppercase">EN VIVO</span>
+              </div>
+              <button id="btn-toggle-sound" aria-label="Activar o desactivar sonido" class="absolute top-3 right-3 bg-black/60 backdrop-blur-md p-2 rounded-full border border-white/20 text-white hover:bg-black/80 transition-colors z-10" type="button">
+                <span id="sound-icon" class="material-symbols-rounded text-base">volume_off</span>
+              </button>
+              <div class="absolute bottom-2 inset-x-3 text-center pointer-events-none z-10">
+                <span class="text-[10px] font-medium text-slate-200 tracking-wide bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">Plan de Incentivos Challenger 60 Años</span>
+              </div>
+            </div>
+          </section>
+          <!-- CATEGORY BUTTONS (CLICK TO OPEN INDIVIDUAL SLIDE) -->
+          <section>
+            <div class="flex items-center justify-between mb-2.5">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Categorías de Liquidación</span>
+              <span class="text-[11px] text-primary font-semibold">Toca para abrir catálogo</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2.5">
+              <button id="cat-gasodomesticos" class="cat-btn flex items-center gap-3 p-3.5 rounded-xl border border-brand-border bg-brand-card/80 hover:border-amber-400/60 hover:bg-brand-card transition-all text-left active:scale-[0.98] shadow-card group" onclick="goToDetail('gasodomesticos')" type="button">
+                <div class="w-9 h-9 rounded-lg bg-amber-400/20 text-amber-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"><span class="material-symbols-rounded text-xl">cooking</span></div>
+                <div class="flex-1 min-w-0"><p class="text-xs font-bold text-white group-hover:text-amber-300 transition-colors">Gasodomésticos</p></div>
+              </button>
+              <button id="cat-video-audio" class="cat-btn flex items-center gap-3 p-3.5 rounded-xl border border-brand-border bg-brand-card/80 hover:border-primary/60 hover:bg-brand-card transition-all text-left active:scale-[0.98] shadow-card group" onclick="goToDetail('video-audio')" type="button">
+                <div class="w-9 h-9 rounded-lg bg-primary/20 text-primary flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"><span class="material-symbols-rounded text-xl">tv</span></div>
+                <div class="flex-1 min-w-0"><p class="text-xs font-bold text-white group-hover:text-primary transition-colors">Video y Audio</p></div>
+              </button>
+              <button id="cat-refrigeracion" class="cat-btn flex items-center gap-3 p-3.5 rounded-xl border border-brand-border bg-brand-card/80 hover:border-blue-400/60 hover:bg-brand-card transition-all text-left active:scale-[0.98] shadow-card group" onclick="goToDetail('refrigeracion')" type="button">
+                <div class="w-9 h-9 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"><span class="material-symbols-rounded text-xl">ac_unit</span></div>
+                <div class="flex-1 min-w-0"><p class="text-xs font-bold text-white group-hover:text-blue-300 transition-colors">Refrigeración</p></div>
+              </button>
+              <button id="cat-lavado" class="cat-btn flex items-center gap-3 p-3.5 rounded-xl border border-brand-border bg-brand-card/80 hover:border-indigo-400/60 hover:bg-brand-card transition-all text-left active:scale-[0.98] shadow-card group" onclick="goToDetail('lavado')" type="button">
+                <div class="w-9 h-9 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"><span class="material-symbols-rounded text-xl">local_laundry_service</span></div>
+                <div class="flex-1 min-w-0"><p class="text-xs font-bold text-white group-hover:text-indigo-300 transition-colors">Lavado</p></div>
+              </button>
+            </div>
+          </section>
+          <!-- TERMS BTN -->
+          <button onclick="switchScreen('terms')" class="w-full py-3 px-4 rounded-xl border border-brand-border/80 bg-brand-card/60 hover:bg-brand-card flex items-center justify-center gap-2 text-primary font-bold text-xs tracking-wider transition-all active:scale-[0.99]" type="button">
+            <span class="material-symbols-rounded text-base">description</span>
+            <span>Ver términos &amp; condiciones</span>
+          </button>
+          <!-- CÓMO FUNCIONA -->
+          <section class="rounded-2xl p-4 bg-gradient-to-b from-[#0B213F] to-[#07172F] border border-brand-border/80 shadow-card">
+            <div class="flex items-center justify-center gap-2 mb-4">
+              <span class="material-symbols-rounded text-primary text-xl">help</span>
+              <h3 class="text-sm font-extrabold text-white tracking-wide">¿Cómo funciona?</h3>
+            </div>
+            <div class="grid grid-cols-3 gap-2">
+              <div class="flex flex-col items-center text-center">
+                <div class="relative mb-2">
+                  <div class="w-12 h-12 rounded-full border-2 border-primary/80 bg-brand-darker flex items-center justify-center text-primary shadow-glow"><span class="material-symbols-rounded text-2xl">shopping_cart</span></div>
+                  <span class="absolute -top-1.5 -left-1.5 w-5 h-5 rounded-full bg-primary text-brand-darker font-black text-[11px] flex items-center justify-center">1</span>
+                </div>
+                <p class="text-[10px] leading-tight text-slate-300">Por ventas en las categorías de liquidación.</p>
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <div class="relative mb-2">
+                  <div class="w-12 h-12 rounded-full border-2 border-primary/80 bg-brand-darker flex items-center justify-center text-primary shadow-glow"><span class="material-symbols-rounded text-2xl">star</span></div>
+                  <span class="absolute -top-1.5 -left-1.5 w-5 h-5 rounded-full bg-primary text-brand-darker font-black text-[11px] flex items-center justify-center">2</span>
+                </div>
+                <p class="text-[10px] leading-tight text-slate-300">Acumula <strong class="text-primary">Ptos.</strong> por cada venta</p>
+              </div>
+              <div class="flex flex-col items-center text-center">
+                <div class="relative mb-2">
+                  <div class="w-12 h-12 rounded-full border-2 border-primary/80 bg-brand-darker flex items-center justify-center text-primary shadow-glow"><span class="material-symbols-rounded text-2xl">card_giftcard</span></div>
+                  <span class="absolute -top-1.5 -left-1.5 w-5 h-5 rounded-full bg-primary text-brand-darker font-black text-[11px] flex items-center justify-center">3</span>
+                </div>
+                <p class="text-[10px] leading-tight text-slate-300">Redime tus <strong class="text-primary">Ptos.</strong> por los premios que más te gustan</p>
+              </div>
+            </div>
+          </section>
+          <div class="pb-6"></div>
+        </main>
+      </div>
+    </div><!-- /screen-home -->
+
+    <!-- ══ SCREEN: DETAIL ══ -->
+    <div class="screen" id="screen-detail">
+      <header class="shrink-0 px-5 pt-4 pb-3 bg-[#07172F]/90 backdrop-blur-xl border-b border-brand-border/50 z-20">
+        <div class="flex items-center justify-between mb-3">
+          <button onclick="goBack()" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-white active:scale-95 transition-transform" type="button">
+            <span class="material-symbols-rounded text-lg">chevron_left</span>
+          </button>
+          <img src="./Enlaces/challenger_60_años.svg" alt="Challenger 60 Años" class="h-10 w-auto object-contain max-w-[180px] filter drop-shadow" />
+          <button class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300" type="button" aria-label="Info">
+            <span class="material-symbols-rounded text-base">info</span>
+          </button>
+        </div>
+        <div class="text-center">
+          <h1 id="detail-title" class="text-2xl font-bold text-white tracking-tight"></h1>
+          <p id="detail-subtitle" class="text-xs text-primary/80 font-medium mt-0.5"></p>
+        </div>
+      </header>
+      <div class="scroll-content">
+        <div class="px-4 py-4 space-y-2.5" id="detail-list"></div>
+        <div id="lavado-bonus" class="hidden mx-4 mb-4 mt-2 text-center px-6 py-5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm">
+          <span class="material-symbols-rounded text-3xl text-primary mb-2 inline-block">auto_awesome</span>
+          <p class="text-xs font-semibold text-white">¡Suma puntos adicionales!</p>
+          <p class="text-[11px] text-blue-200/60 mt-1 leading-relaxed">Consigue metas exclusivas de la categoría Lavado y Refrigeración durante la vigencia de la campaña.</p>
+        </div>
+        <div class="pt-4 pb-6 text-center flex flex-col items-center gap-1 opacity-80">
+          <img src="./Enlaces/challenger_60_años.svg" alt="Challenger 60 Años" class="h-6 w-auto object-contain opacity-80" />
+          <div class="flex items-center gap-1.5">
+            <div class="col-flag"><span></span><span></span><span></span></div>
+            <span class="text-[8px] tracking-wider text-slate-400 uppercase font-medium">LA EMPRESA MÁS BONITA DE COLOMBIA</span>
+          </div>
+        </div>
+      </div>
+    </div><!-- /screen-detail -->
+
+    <!-- ══ SCREEN: TÉRMINOS ══ -->
+    <div class="screen" id="screen-terms">
+      <header class="shrink-0 px-5 pt-4 pb-3 bg-[#07172F]/90 backdrop-blur-xl border-b border-brand-border/50 z-20">
+        <div class="flex items-center justify-between">
+          <button onclick="goBack()" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-white active:scale-95" type="button">
+            <span class="material-symbols-rounded text-lg">chevron_left</span>
+          </button>
+          <img src="./Enlaces/challenger_60_años.svg" alt="Challenger 60 Años" class="h-7 w-auto object-contain max-w-[140px] filter drop-shadow" />
+          <div class="w-9"></div>
+        </div>
+        <div class="mt-3 flex items-center gap-1.5 justify-center">
+          <span class="material-symbols-rounded text-primary text-lg">gavel</span>
+          <h1 class="text-sm font-extrabold tracking-widest uppercase text-white">Términos &amp; Condiciones</h1>
+        </div>
+      </header>
+      <div class="scroll-content">
+        <div class="px-5 py-5 space-y-4 text-xs text-slate-300 leading-relaxed">
+          <p class="text-xs font-semibold text-slate-200">El presente programa aplica exclusivamente para asesores de ventas vinculados a puntos de venta participantes de la campaña <strong class="text-white">Challenger 60 Años — Octubre 2026</strong>.</p>
+          
+          <div class="space-y-3 pt-1">
+            <div class="p-4 rounded-2xl bg-brand-card/70 border border-brand-border/80 shadow-card">
+              <h2 class="text-xs font-extrabold uppercase tracking-widest text-primary mb-3.5 flex items-center gap-1.5">
+                <span class="material-symbols-rounded text-sm">gavel</span>
+                12 Reglas del Plan de Incentivos
+              </h2>
+              <ol class="space-y-3 text-xs text-slate-200">
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-primary/20 text-primary text-[11px] font-extrabold flex items-center justify-center shrink-0 mt-0.5">1</span>
+                  <span>Acumula puntos a partir de <strong>6 unidades</strong> participantes.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-primary/20 text-primary text-[11px] font-extrabold flex items-center justify-center shrink-0 mt-0.5">2</span>
+                  <span>Los puntos especiales solo aplican si se cumple el mínimo de <strong>6 Und</strong> de la categoría y las mismas unidades en televisión y campanas.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-primary/20 text-primary text-[11px] font-extrabold flex items-center justify-center shrink-0 mt-0.5">3</span>
+                  <span>Aplica solo para las referencias publicadas en esta pieza.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-primary/20 text-primary text-[11px] font-extrabold flex items-center justify-center shrink-0 mt-0.5">4</span>
+                  <span>Aplica a partir del <strong>1 al 31 de Octubre del 2026</strong>.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-primary/20 text-primary text-[11px] font-extrabold flex items-center justify-center shrink-0 mt-0.5">5</span>
+                  <span>No válido para ventas mayoristas, ni institucionales.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-primary/20 text-primary text-[11px] font-extrabold flex items-center justify-center shrink-0 mt-0.5">6</span>
+                  <span>No acumulan puntos el personal administrativo, bodegueros, dueños, administradores de los almacenes.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-primary/20 text-primary text-[11px] font-extrabold flex items-center justify-center shrink-0 mt-0.5">7</span>
+                  <span>Se puede acumular puntos por máximo <strong>40 unidades</strong> por vendedor en la liquidación.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-primary/20 text-primary text-[11px] font-extrabold flex items-center justify-center shrink-0 mt-0.5">8</span>
+                  <span>En caso de encontrar inconsistencia en los reportes, se sanciona la cuenta por <strong>3 meses</strong>, es decir, no se acumularán puntos durante ese periodo.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-primary/20 text-primary text-[11px] font-extrabold flex items-center justify-center shrink-0 mt-0.5">9</span>
+                  <span>Los reportes deberán ser enviados por la gerencia de cuenta o administradores de punto de venta, estos deben ser enviados a más tardar el <strong>día 5</strong> luego de finalizado el periodo a reportar.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-primary/20 text-primary text-[11px] font-extrabold flex items-center justify-center shrink-0 mt-0.5">10</span>
+                  <span>Los clientes tienen máximo hasta la siguiente liquidación para reportar cualquier reclamación respecto al plan, este deberá reportarse en el formato diseñado para tal fin. No se aceptará ninguna excepción por ningún concepto.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-primary/20 text-primary text-[11px] font-extrabold flex items-center justify-center shrink-0 mt-0.5">11</span>
+                  <span>Aplica términos y condiciones de plataforma <strong>JUJU</strong>.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-primary/20 text-primary text-[11px] font-extrabold flex items-center justify-center shrink-0 mt-0.5">12</span>
+                  <span>La acumulación de puntos bajo esta dinámica no representa ninguna relación entre Challenger y los ganadores de los puntos, más allá de la relación comercial con el cliente.</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="pt-5 border-t border-brand-border/50 flex items-center justify-between">
+            <img src="./Enlaces/challenger_60_años.svg" alt="Challenger 60 Años" class="h-7 w-auto opacity-90" />
+            <div class="flex items-center gap-2">
+              <span class="text-xs text-slate-400 font-medium">Desarrollado por</span>
+              <img src="./Enlaces/logo_juju.svg" alt="Juju" class="h-7 w-auto" />
+            </div>
+          </div>
+        </div>
+        <div class="pb-10"></div>
+      </div>
+    </div><!-- /screen-terms -->
+
+  </div><!-- /screens-wrapper -->
+
+  <!-- BOTTOM NAV -->
+  <nav class="shrink-0 bg-[#051429]/95 backdrop-blur-lg border-t border-brand-border/60 px-6 pb-safe pt-2 z-40">
+    <div class="flex items-center justify-around">
+      <button id="nav-inicio" class="nav-item flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" onclick="switchScreen('home')" type="button">
+        <span class="material-symbols-rounded text-xl" style="font-variation-settings:'FILL' 0">home</span>
+        <span class="text-[10px] font-semibold">Inicio</span>
+      </button>
+      <button id="nav-incentivos" class="nav-item flex flex-col items-center gap-1 text-primary" onclick="switchScreen('home')" type="button">
+        <div class="relative">
+          <span class="material-symbols-rounded text-xl">military_tech</span>
+          <span class="nav-dot absolute -top-0.5 -right-0.5 w-1.5 h-1.5 rounded-full bg-primary"></span>
+        </div>
+        <span class="text-[10px] font-bold">Incentivos</span>
+      </button>
+      <button id="nav-terminos" class="nav-item flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" onclick="switchScreen('terms')" type="button">
+        <span class="material-symbols-rounded text-xl" style="font-variation-settings:'FILL' 0">gavel</span>
+        <span class="text-[10px] font-semibold">Términos</span>
+      </button>
+    </div>
+  </nav>
+
+</div><!-- /mobile-container -->
+
+<!-- VIDEO OVERLAY -->
+<div id="video-overlay" role="dialog" aria-modal="true">
+  <div class="relative flex flex-col items-center gap-3">
+    <button onclick="closeVideo()" class="self-end text-slate-300 hover:text-white flex items-center gap-1 text-sm font-semibold mb-1" type="button">
+      <span class="material-symbols-rounded">close</span> Cerrar
+    </button>
+    <video id="campaign-video" controls playsinline preload="metadata">
+      <source src="https://www.madrugafilms.com/wp-content/uploads/2026/10/video_spot_campana.mp4" type="video/mp4"/>
+      Tu navegador no soporta video HTML5.
+    </video>
+  </div>
+</div>
+
+<script>
+/* ═══════ STATE ═══════ */
+let currentScreen = 'home';
+let prevScreen    = 'home';
+let currentTab    = 'gasodomesticos';
+
+const CATS = {
+  gasodomesticos: {
+    title: 'Gasodomésticos',
+    sub: 'Catálogo de incentivos por ventas en gasodomésticos',
+    items: [
+      { icon: 'cooking', label: 'GASODOMÉSTICOS', name: 'Cocinas >$300.000', pts: '4 PTS', c: 'amber' },
+      { icon: 'cooking', label: 'GASODOMÉSTICOS', name: 'Cocinas >$450.000', pts: '6 PTS', c: 'amber' },
+      { icon: 'microwave', label: 'GASODOMÉSTICOS', name: 'Hornos >$800.000-Microondas', pts: '6 PTS', c: 'amber' },
+      { icon: 'countertops', label: 'GASODOMÉSTICOS', name: 'Campanas >$200.000 <$350.000', pts: '3 PTS', c: 'amber' },
+      { icon: 'countertops', label: 'GASODOMÉSTICOS', name: 'Campanas >$350.000', pts: '4 PTS', c: 'amber' },
+      { icon: 'stadium', label: 'GASODOMÉSTICOS', name: 'Estufa Piso SI9461-SI9462-SI9571-SI9572', pts: '15 PTS', c: 'amber' },
+      { icon: 'stadium', label: 'GASODOMÉSTICOS', name: 'Estufa Piso SI9575-SI9576-SI9465-SI9466', pts: '20 PTS', c: 'amber' },
+      { icon: 'mode_heat', label: 'GASODOMÉSTICOS', name: 'Calentadores', pts: '12 PTS', c: 'amber' },
+      { icon: 'skillet', label: 'GASODOMÉSTICOS', name: 'Mesones y Pocetas', pts: '20 PTS', c: 'amber' },
+      { icon: 'flatware', label: 'GASODOMÉSTICOS', name: 'Lavavajillas', pts: '20 PTS', c: 'amber' }
+    ]
+  },
+  'video-audio': {
+    title: 'Video y Audio',
+    sub: 'Catálogo de incentivos por metas en pantallas y audio',
+    items: [
+      { icon: 'tv', label: 'VIDEO Y AUDIO', name: 'Televisores 32"', sub2: 'Ventas: > 3 unidades', pts: '5 PTS', c: 'cyan' },
+      { icon: 'tv', label: 'VIDEO Y AUDIO', name: 'Televisores 40"', sub2: 'Ventas: > 4 unidades', pts: '6 PTS', c: 'cyan' },
+      { icon: 'tv', label: 'VIDEO Y AUDIO', name: 'Televisores 43"', sub2: 'Ventas: 1 - 4 unidades', pts: '4 PTS', c: 'cyan' },
+      { icon: 'tv', label: 'VIDEO Y AUDIO', name: 'Televisores 43"', sub2: 'Ventas: >= 5 unidades', pts: '7 PTS', c: 'cyan' },
+      { icon: 'tv', label: 'VIDEO Y AUDIO', name: 'Televisores 50" a 58"', sub2: 'Ventas: 1 - 4 unidades', pts: '8 PTS', c: 'cyan' },
+      { icon: 'tv', label: 'VIDEO Y AUDIO', name: 'Televisores 50" a 58"', sub2: 'Ventas: >= 5 unidades', pts: '12 PTS', c: 'cyan' },
+      { icon: 'tv', label: 'VIDEO Y AUDIO', name: 'Televisores 65"', sub2: 'Ventas: 1 - 5 unidades', pts: '13 PTS', c: 'cyan' },
+      { icon: 'tv', label: 'VIDEO Y AUDIO', name: 'Televisores 65"', sub2: 'Ventas: >= 6 unidades', pts: '20 PTS', c: 'cyan' },
+      { icon: 'tv', label: 'VIDEO Y AUDIO', name: 'Televisores 75"', sub2: 'Ventas: 1 - 2 unidades', pts: '17 PTS', c: 'cyan' },
+      { icon: 'tv', label: 'VIDEO Y AUDIO', name: 'Televisores 75"', sub2: 'Ventas: >= 3 unidades', pts: '25 PTS', c: 'cyan' },
+      { icon: 'tv_gen', label: 'VIDEO Y AUDIO', name: 'Televisores 100"', sub2: 'Pantalla gigante 100"', pts: '50 PTS', c: 'cyan' },
+      { icon: 'speaker', label: 'VIDEO Y AUDIO', name: 'Audio', sub2: 'Sistemas de Sonido', pts: '10 PTS', c: 'cyan' }
+    ]
+  },
+  refrigeracion: {
+    title: 'Refrigeración',
+    sub: 'Incentivos por ventas en la categoría Refrigeración',
+    items: [
+      { icon: 'ac_unit', label: 'REFRIGERACIÓN', name: 'Aires Ac', sub2: 'Aires acondicionados', pts: '10 PTS', c: 'blue' },
+      { icon: 'kitchen', label: 'REFRIGERACIÓN', name: 'Minibares Todos', sub2: 'Todos los modelos', pts: '6 PTS', c: 'blue' },
+      { icon: 'kitchen', label: 'REFRIGERACIÓN', name: 'Domestica', sub2: 'Refrigeración doméstica', pts: '7 PTS', c: 'blue' },
+      { icon: 'kitchen', label: 'REFRIGERACIÓN', name: 'E-cool 478-415-385', pts: '10 PTS', c: 'blue' },
+      { icon: 'kitchen', label: 'REFRIGERACIÓN', name: 'E-cool 482-420 / SBS 430 - 525 - 513 - 628 - 502', pts: '12 PTS', c: 'blue' },
+      { icon: 'ac_unit', label: 'REFRIGERACIÓN', name: 'Congeladores', sub2: 'Horizontales y verticales', pts: '5 PTS', c: 'blue' }
+    ]
+  },
+  lavado: {
+    title: 'Lavado',
+    sub: 'Acumula puntos por cada unidad de lavado facturada',
+    items: [
+      { icon: 'local_laundry_service', label: 'LAVADO', name: 'CW 5711-13-15 -18 / CW 8014', sub2: 'Línea de Lavado Challenger', pts: '8 PTS', c: 'indigo' }
+    ]
+  }
+};
+const C_MAP = {
+  amber:  {bg:'rgba(251,191,36,.15)', bd:'rgba(245,158,11,.3)', txt:'#fcd34d', lbl:'#fbbf24'},
+  cyan:   {bg:'rgba(6,182,212,.1)',   bd:'rgba(6,182,212,.3)',  txt:'#00E5FF', lbl:'#00E5FF'},
+  blue:   {bg:'rgba(59,130,246,.1)',  bd:'rgba(59,130,246,.3)', txt:'#60a5fa', lbl:'#93c5fd'},
+  indigo: {bg:'rgba(99,102,241,.1)',  bd:'rgba(99,102,241,.3)', txt:'#818cf8', lbl:'#a5b4fc'}
+};
+
+/* ═══════ NAVIGATION ═══════ */
+function switchScreen(id) {
+  if (id === currentScreen) return;
+  const prev = document.getElementById('screen-' + currentScreen);
+  const next = document.getElementById('screen-' + id);
+  if (!next) return;
+  prev.classList.remove('active');
+  prev.classList.add('exit');
+  next.classList.add('active');
+  setTimeout(() => { prev.classList.remove('exit'); }, 300);
+  prevScreen = currentScreen;
+  currentScreen = id;
+  updateNav(id);
+}
+function updateNav(id) {
+  const MAP = {home:'nav-incentivos', detail:'nav-incentivos', terms:'nav-terminos'};
+  document.querySelectorAll('.nav-item').forEach(b => {
+    b.querySelectorAll('span, div').forEach(el => el.style.removeProperty('color'));
+    b.style.color = '';
+  });
+  const act = document.getElementById(MAP[id] || 'nav-incentivos');
+  if (act) act.querySelectorAll('.material-symbols-rounded, span:not(.nav-dot)').forEach(el => el.style.color = '#00E5FF');
+}
+function goBack() { switchScreen('home'); }
+
+/* ═══════ DETAIL SCREEN SLIDE ═══════ */
+function goToDetail(cat) {
+  const data = CATS[cat];
+  if (!data) return;
+  document.getElementById('detail-title').textContent = data.title;
+  document.getElementById('detail-subtitle').textContent = data.sub;
+  const list = document.getElementById('detail-list');
+  list.innerHTML = '';
+  data.items.forEach(item => {
+    const cm = C_MAP[item.c] || C_MAP.cyan;
+    const labelHtml = item.label ? `<span style="font-size:.625rem;text-transform:uppercase;font-weight:800;letter-spacing:.06em;color:${cm.lbl}">${item.label}</span>` : '';
+    const sub2Html  = item.sub2  ? `<p style="font-size:.625rem;color:#94a3b8">${item.sub2}</p>` : '';
+    list.innerHTML += `
+      <div class="detail-card">
+        <div style="display:flex;align-items:center;gap:.75rem">
+          <div style="width:2.5rem;height:2.5rem;border-radius:.625rem;background:${cm.bg};border:1px solid ${cm.bd};display:flex;align-items:center;justify-content:center;color:${cm.txt};flex-shrink:0">
+            <span class="material-symbols-rounded" style="font-size:1.25rem">${item.icon}</span>
+          </div>
+          <div>${labelHtml}<p style="font-size:.875rem;font-weight:600;color:#fff;line-height:1.4">${item.name}</p>${sub2Html}</div>
+        </div>
+        <span class="pts-badge">${item.pts}</span>
+      </div>`;
+  });
+  document.getElementById('lavado-bonus').classList.toggle('hidden', cat !== 'lavado');
+  switchScreen('detail');
+}
+
+/* ═══════ INLINE VIDEO & AUDIO CONTROLS ═══════ */
+const inlineVideo = document.getElementById('hero-inline-video');
+const soundBtn = document.getElementById('btn-toggle-sound');
+const soundIcon = document.getElementById('sound-icon');
+if (soundBtn && inlineVideo) {
+  soundBtn.addEventListener('click', () => {
+    inlineVideo.muted = !inlineVideo.muted;
+    soundIcon.textContent = inlineVideo.muted ? 'volume_off' : 'volume_up';
+  });
+}
+</script>
+</body>
+</html>
